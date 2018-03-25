@@ -44484,7 +44484,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         editPost: function editPost(id) {
-            window.location.href = window.location + '/' + id + '/edit';
+            window.location.href = '/admin/posts/' + id + '/edit';
         }
     },
     mounted: function mounted() {}

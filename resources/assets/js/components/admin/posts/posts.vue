@@ -56,7 +56,7 @@
         },
         methods: {
             editPost(id) {
-                window.location.href = window.location + '/' + id + '/edit';
+                window.location.href ='/admin/posts/' + id + '/edit';
             }
         },
         mounted(){
