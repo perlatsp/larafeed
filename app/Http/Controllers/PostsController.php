@@ -20,8 +20,6 @@ class PostsController extends Controller
         } else {
             return view('front.index', ['posts' => $posts]);
         }
-
-
     }
 
     /**

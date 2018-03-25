@@ -7,7 +7,7 @@
             <v-toolbar-title>LaraFeed</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down">
-                <v-btn flat href="/posts">Posts</v-btn>
+                <v-btn flat href="/">Home</v-btn>
                 <v-btn >Link Two</v-btn>
                 <v-btn flat>Link Three</v-btn>
                 <v-btn href="/admin">Admin <v-icon right>person</v-icon></v-btn>

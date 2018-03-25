@@ -7,9 +7,10 @@
                 <template slot="headers" slot-scope="props">
                     <tr>
                         <th>#</th>
+                        <th>Image</th>
                         <th>Title</th>
                         <th>Category</th>
-                        <th>Image</th>
+
                         <th>Options</th>
                     </tr>
                 </template>
@@ -19,13 +20,14 @@
                     <tr class="text-xs-center">
                         <td>{{ props.item.id }}
                         </td>
+
+                        <td>
+                            <v-avatar tile><img :src="props.item.image" alt=""></v-avatar>
+                        </td>
                         <td class="text-xs-left">
                             {{ props.item.title }}
                         </td>
                         <td>{{ props.item.category }}</td>
-                        <td>
-                            <v-avatar tile><img :src="props.item.image" alt=""></v-avatar>
-                        </td>
                         <td>
                             <v-btn small icon color="teal" dark :href="'/posts/'+props.item.id">
                                 <v-icon>link</v-icon>

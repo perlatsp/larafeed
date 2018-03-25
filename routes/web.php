@@ -16,19 +16,17 @@ Route::get('/',['uses'=>'PostsController@index']);
 
 Route::resource('posts','PostsController');
 
-Route::group(['prefix'=>'admin'],function (){
-    Route::get('/',function (){
-        return view('admin.dashboard');
-    });
-
+Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
+    Route::get('/',['uses'=>'DashboardController@index'])->name('admin');
     Route::resource('posts','PostsController');
     Route::resource('categories','CategoryController');
-//    Route::group(['prefix'=>'posts'],function (){
-//        Route::get('/',['uses'=>'PostsController@index']);
-//        Route::get('/{id}/edit',['uses'=>'PostsController@edit']);
-//
-//    });
 });
-Auth::routes();
+
+Route::get('login',['uses'=>'Auth\LoginController@showLogin'])->name('login');
+
+
+Route::post('login',['uses'=>'Auth\LoginController@Login']);
+Route::post('logout',['uses'=>'Auth\LoginController@Logout']);
+
 
 Route::get('/home', 'HomeController@index')->name('home');

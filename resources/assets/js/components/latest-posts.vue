@@ -1,7 +1,7 @@
 <template>
     <v-list>
         <v-subheader>Latest Posts</v-subheader>
-        <v-list-tile @click="" v-for="post in posts" :key="post.id">
+        <v-list-tile @click="" v-for="post in posts" :key="post.id" :href="'/posts/'+post.id">
             <v-list-tile-content>
                 <v-list-tile-title>
                     {{post.title}}
